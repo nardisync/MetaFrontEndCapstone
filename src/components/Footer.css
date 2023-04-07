@@ -1,0 +1,29 @@
+.App-Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.App-Footer > .Footer > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: black;
+}
+
+.App-Footer > .Footer > ul > li {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.App-Footer > .Footer > ul > li a {
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+}
+
+.App-Footer > .Footer > ul > li a:hover {
+  font-weight: bold;
+}

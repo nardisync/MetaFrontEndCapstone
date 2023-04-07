@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App-logo {
@@ -35,4 +36,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.SubTitle{
+  font-family: 'Markazi';
+  font-weight: normal;
+  font-size: 40pt;
+  color: #333333;
+}
+
+.LeadText{
+  font-family: 'Karla Regular';
+  font-weight: medium;
+  font-size: 18pt;
+  color: #333333;
+}
+
+.CardTitle {
+  font-family: 'Markazi';
+  font-weight: bold;
+  font-size: 18pt;
+  color: #333333;
+}
+
+.CardParagraph{
+  font-family: 'Karla Regular';
+  font-weight: normal;
+  font-size: 16pt;
+  color: #495E57;
+}
+
+.HighlightText{
+  font-family: 'Karla Regular';
+  font-weight: normal;
+  font-size: 16pt;
+  color: #495E57;
 }
