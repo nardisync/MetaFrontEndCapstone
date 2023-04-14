@@ -1,6 +1,7 @@
 import Header from './Header';
-import Main from './Main';
+import Chicago from './Chicago';
 import Nav from './Nav';
+import CustomersSay from './CustomersSay';
 import Footer from './Footer';
 
 
@@ -9,7 +10,8 @@ function HomePage() {
       <root className="HomePage">
         <Header/>
         <Nav/>
-        <Main/>
+        <Chicago/>
+        <CustomersSay/>
         <Footer/>
       </root>
     );
