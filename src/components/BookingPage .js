@@ -1,12 +1,23 @@
+import React from "react"
+import './BookingPage.css'
+
+import Header from './Header';
+import Nav from './Nav';
+import BookingForm from './BookingForm.js'
+import Footer from './Footer';
+import './HomePage.css'
+
+function BookingPage ({availableTimes, formData, setFormData}){
 
 
-function BookingPage() {
     return (
-      <root className="BookingPage">
-        <p>Booking Page</p>
-      </root>
-    );
-  }
-  
+        <div className="BookingPageContainer">
+          <Header/>
+          <Nav/>
+          <BookingForm availableTimes={availableTimes} formData={formData} setFormData={setFormData}/>
+          <Footer/>
+        </div>
+    )
+}
 
-export default BookingPage;
+export default BookingPage 
