@@ -1,0 +1,44 @@
+
+.ChicagoContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    background-color: #495E57;
+    overflow: visible;
+    max-height: 250px;
+    margin-bottom: 100px;
+}
+
+.ChicagoDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.ChicagoDescriptionText > h2 {
+    color: #F4CE14;
+    margin: 0px 0px;
+}
+
+.ChicagoDescriptionText > h3 {
+    color: white;
+    margin: 0px 0px;
+    font-weight: normal;
+}
+
+.ChicagoDescriptionText > p {
+    color: white;
+    margin: 0px 0px;
+    
+}
+
+.ChicagoImage {
+    height: 100%;
+}
+
+.ChicagoImage > img {
+    height: 350px;
+    width: 300px;
+    border-radius: 5%;
+}

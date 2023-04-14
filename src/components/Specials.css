@@ -1,6 +1,7 @@
 
 .SpecialsContainer {
     width: 27%;
+    max-width: 27%;
     height: 460px;
     margin: 0% 1%;
     background-color: #EDEFEE;
