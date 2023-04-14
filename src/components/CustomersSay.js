@@ -1,4 +1,5 @@
 import React from "react"
+import './CustomerSay.css';
 import CallToAction from "./CallToAction"
 import Specials from "./Specials"
 

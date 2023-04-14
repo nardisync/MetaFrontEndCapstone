@@ -1,0 +1,31 @@
+
+.SpecialsContainer {
+    width: 27%;
+    height: 460px;
+    margin: 0% 1%;
+    background-color: #EDEFEE;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.SpecialImage {
+    height: 250px;
+}
+
+.SpecialImage>img {
+    height: 100%;
+}
+
+.SpecialHeader {
+    text-indent: 10px;   
+    display: flex;
+    align-items: center; 
+}
+
+.SpecialPrice {
+    color: #EE9972
+}
+
+.SpecialContent {
+    margin: 0% 5%;
+}
