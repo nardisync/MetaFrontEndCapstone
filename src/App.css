@@ -48,6 +48,10 @@
   width: 150px;
 }
 
+.GeneralButton:hover {
+  font-weight: bold;
+}
+
 .SubTitle{
   font-family: 'Markazi';
   font-weight: normal;
