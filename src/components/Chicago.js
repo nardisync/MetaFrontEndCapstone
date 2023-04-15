@@ -1,11 +1,20 @@
 import React from "react"
 import restaurantImage from './assets/restauranfood.jpg'
 import './Chicago.css'
+import { useNavigate } from "react-router-dom"
 
 
 
 
 function Chicago (){
+
+    const navigate = useNavigate();
+
+
+    function handleClick() {
+        navigate('/booking');
+    }
+
     return (
         <div className="ChicagoContainer">
             <div className="ChicagoDescription HighlightText">
@@ -19,7 +28,7 @@ function Chicago (){
                         modern twist
                     </p>
                 </div>
-                <button className="reserveTableButton GeneralButton">Reserve a Table</button>
+                <button className="reserveTableButton GeneralButton" onClick={handleClick}>Reserve a Table</button>
             </div>
             <div className="ChicagoImage">
                 <img src={restaurantImage}/>

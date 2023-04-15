@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./BookingForm.css";
+import { useNavigate } from "react-router-dom";
 
-function BookingForm({ availableTimes, formData, setFormData, navigate, submitFormFunction }) {
+function BookingForm({ availableTimes, formData, setFormData}) {
   
+  let [buttonDisabled, setButtonDisabled] = useState(true);
+
+  const navigate = useNavigate()
+
   function handleChanges(event) {
+
     console.log("Data:", availableTimes, formData )
+
+    if ("undefined" in formData) {
+      setButtonDisabled(true)
+    } else {
+      setButtonDisabled(false)
+    }
+
     const { name, value, type, checked } = event.target;
     setFormData((previousData) => {
       return {
@@ -14,9 +27,12 @@ function BookingForm({ availableTimes, formData, setFormData, navigate, submitFo
     });
   }
 
-    
+  
+  
 
-  function handlerSubmit() {
+
+  function handlerSubmit(event) {
+    event.preventDefault()
     console.log(formData);
     return navigate("/booking-confirmation")
     //return submitFormFunction() ? navigate("/booking-confirmation") : null;
@@ -70,7 +86,7 @@ function BookingForm({ availableTimes, formData, setFormData, navigate, submitFo
         onChange={handleChanges}
         name="occasionForm"
       >
-        <option value="None">-- Choose --</option>
+        <option value="undefined">-- Choose --</option>
         <option value="birthday">Birthday</option>
         <option value="anniversary">Anniversary</option>
       </select>
@@ -79,6 +95,7 @@ function BookingForm({ availableTimes, formData, setFormData, navigate, submitFo
         type="submit"
         text="Make Your reservation"
         className="GeneralButton"
+        disabled={buttonDisabled}
       >
         Make Your reservation
       </button>

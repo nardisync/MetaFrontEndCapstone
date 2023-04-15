@@ -13,6 +13,9 @@ function BookingPage({
   setFormData,
   submitFormFunction
 }) {
+
+
+
   return (
     <div className="BookingPageContainer">
       <Header />
