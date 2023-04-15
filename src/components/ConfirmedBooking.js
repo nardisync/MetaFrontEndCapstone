@@ -11,17 +11,13 @@ import Footer from './Footer';
 function ConfirmedBooking({ dataForm, availableTimesForm, 
                             numberOfGuestForm, occasionForm}) {
 
+    console.log(dataForm, availableTimesForm, 
+        numberOfGuestForm, occasionForm)
     return(
         <div className='ConfirmedPageContainer'>
             <Nav/>
             <h2>Your booking is confirmed!</h2>
-            <h3>Here the review:</h3>
-            <ul>
-                <li>Date: {dataForm}</li>
-                <li>Time: {availableTimesForm}</li>
-                <li>Guest: {numberOfGuestForm}</li>
-                <li>Occasion: {occasionForm}</li>
-            </ul>
+
             <p>Have fun!</p>
             <Footer/>
         </div>
@@ -29,3 +25,14 @@ function ConfirmedBooking({ dataForm, availableTimesForm,
 }
 
 export default ConfirmedBooking 
+
+
+/*
+            <h3>Here the review:</h3>
+            <ul>
+                <li>Date: {dataForm}</li>
+                <li>Time: {availableTimesForm}</li>
+                <li>Guest: {numberOfGuestForm}</li>
+                <li>Occasion: {occasionForm}</li>
+            </ul>
+*/

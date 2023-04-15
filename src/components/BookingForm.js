@@ -1,9 +1,10 @@
 import React from "react";
 import "./BookingForm.css";
 
-function BookingForm({ availableTimes, formData, setFormData }) {
-    
+function BookingForm({ availableTimes, formData, setFormData, navigate, submitFormFunction }) {
+  
   function handleChanges(event) {
+    console.log("Data:", availableTimes, formData )
     const { name, value, type, checked } = event.target;
     setFormData((previousData) => {
       return {
@@ -13,15 +14,19 @@ function BookingForm({ availableTimes, formData, setFormData }) {
     });
   }
 
-  function handlerSubmit(event) {
-    event.preventDefault();
+    
+
+  function handlerSubmit() {
     console.log(formData);
+    return navigate("/booking-confirmation")
+    //return submitFormFunction() ? navigate("/booking-confirmation") : null;
   }
 
   return (
     <form onSubmit={handlerSubmit} className="BookingForm">
       <label htmlFor="dataForm">Date of Reservation:</label>
       <input
+        required
         type="date"
         name="dataForm"
         placeholder="Choose a Date"
@@ -35,6 +40,7 @@ function BookingForm({ availableTimes, formData, setFormData }) {
         value={formData.timeForm}
         onChange={handleChanges}
         name="availableTimesForm"
+        required
       >
         <option value="None">-- Choose --</option>
         {
@@ -46,9 +52,10 @@ function BookingForm({ availableTimes, formData, setFormData }) {
       </select>
       <label htmlFor="numberOfGuestForm">Number of guests</label>
       <input
+        required
         type="number"
         name="numberOfGuestForm"
-        placeholder="Choose a Date"
+        placeholder="Choose the number of Guests"
         onChange={handleChanges}
         value={formData.numberOfGuestForm}
         min="1"
@@ -58,6 +65,7 @@ function BookingForm({ availableTimes, formData, setFormData }) {
       <label htmlFor="occasionForm">Occasion</label>
       <select
         id="occasionForm"
+        required
         value={formData.occasionForm}
         onChange={handleChanges}
         name="occasionForm"

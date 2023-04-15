@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import HomePage from "./HomePage";
 import BookingPage from "./BookingPage ";
 import ConfirmedBooking from "./ConfirmedBooking";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import "./Main.css";
 
 function Main() {
+  
+  function submitForm(formData) {
+    return submitAPI(formData);
+  }
+
   const seededRandom = function (seed) {
     var m = 2 ** 35 - 31;
     var a = 185852;
@@ -63,6 +68,7 @@ function Main() {
               availableTimes={availableTimes}
               formData={formData}
               setFormData={setFormData}
+              submitFormFunction={submitForm}
             />
           }
         ></Route>

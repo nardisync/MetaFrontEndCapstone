@@ -2,6 +2,9 @@ import React from "react"
 import restaurantImage from './assets/restauranfood.jpg'
 import './Chicago.css'
 
+
+
+
 function Chicago (){
     return (
         <div className="ChicagoContainer">
